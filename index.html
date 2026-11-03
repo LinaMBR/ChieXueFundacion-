@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brochure Institucional - Fundación Chie Xue</title>
+    <style>
+        :root {
+            --primary-blue: #004d99;
+            --secondary-blue: #0073e6;
+            --light-blue: #e6f0ff;
+            --text-color: #2c3e50;
+            --white: #ffffff;
+            --gray-bg: #f4f7f6;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #eef2f5;
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .brochure-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--white);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        /* Portada */
+        .cover {
+            background: var(--white);
+            color: var(--text-color);
+            text-align: center;
+            padding: 50px 20px;
+            border-bottom: 5px solid var(--primary-blue);
+        }
+
+        .cover img {
+            max-width: 240px;
+            height: auto;
+            margin-bottom: 25px;
+        }
+
+        .cover h1 {
+            font-size: 2.2rem;
+            color: var(--primary-blue);
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+        }
+
+        .cover .slogan {
+            font-size: 1.1rem;
+            font-style: italic;
+            color: var(--secondary-blue);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .cover .nit {
+            font-size: 0.95rem;
+            background: var(--light-blue);
+            color: var(--primary-blue);
+            display: inline-block;
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        /* Secciones */
+        .content-section {
+            padding: 35px 40px;
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        .content-section:nth-child(even) {
+            background-color: var(--gray-bg);
+        }
+
+        h2 {
+            color: var(--primary-blue);
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            position: relative;
+            padding-bottom: 8px;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 45px;
+            height: 3px;
+            background-color: var(--secondary-blue);
+        }
+
+        p, ul {
+            font-size: 1rem;
+            margin-bottom: 15px;
+            color: #4f5d75;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+        }
+
+        ul li::before {
+            content: '▪';
+            color: var(--secondary-blue);
+            position: absolute;
+            left: 0;
+        }
+
+        /* Grid para Misión y Visión */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+            border-top: 4px solid var(--secondary-blue);
+        }
+
+        /* Contacto */
+        .contact-info {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 20px;
+            background: var(--primary-blue);
+            color: var(--white);
+            padding: 40px;
+        }
+
+        .contact-info h2 {
+            color: var(--white);
+        }
+        .contact-info h2::after {
+            background-color: var(--white);
+        }
+
+        .contact-details p {
+            color: #f8f9fa;
+            margin-bottom: 10px;
+        }
+
+        .contact-details strong {
+            color: #b3d1ff;
+        }
+
+        .web-link {
+            display: inline-block;
+            margin-top: 15px;
+            background: var(--white);
+            color: var(--primary-blue);
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .web-link:hover {
+            background: var(--light-blue);
+        }
+
+        @media (max-width: 768px) {
+            .grid-2, .contact-info {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="brochure-container">
+
+    <!-- 1. PORTADA -->
+    <header class="cover">
+        <!-- Reemplaza 'logo.jpeg' con el nombre de tu archivo de imagen local o URL -->
+        <img src="logo.jpeg" alt="Logo Fundación Chie Xue">
+        <h1>FUNDACIÓN CHIE XUE</h1>
+        <p class="slogan">"Unidos somos más"</p>
+        <div class="nit">NIT: 901.778.247-1</div>
+    </header>
+
+    <!-- 2. QUIÉNES SOMOS -->
+    <section class="content-section">
+        <h2>¿Quiénes Somos?</h2>
+        <p>Somos una entidad privada sin ánimo de lucro constituida legalmente como fundación, comprometida con el tejido social de la comunidad. Promovemos el bienestar integral mediante la ejecución de proyectos benéficos, educativos, culturales y de intervención social.</p>
+        <p><strong>Liderazgo Institucional:</strong></p>
+        <ul>
+            <li><strong>Directora:</strong> Nathalia Ayala</li>
+            <li><strong>Subdirectora:</strong> Karen Hernandez</li>
+        </ul>
+    </section>
+
+    <!-- 3 & 4. MISIÓN Y VISIÓN -->
+    <section class="content-section">
+        <div class="grid-2">
+            <div class="card">
+                <h2>Misión</h2>
+                <p>Contribuir activamente al desarrollo de programas de educación, salud, cultura y otros aspectos fundamentales que beneficien a la sociedad en general, fomentando el bienestar comunitario con un fuerte sentido ético y solidario.</p>
+            </div>
+            <div class="card">
+                <h2>Visión</h2>
+                <p>Consolidarnos como una organización líder y referente en el desarrollo de iniciativas sociales y de emprendimiento en Bogotá, expandiendo nuestro impacto positivo en comunidades vulnerables bajo criterios de sostenibilidad.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. NUESTRA POBLACIÓN -->
+    <section class="content-section">
+        <h2>Nuestra Población</h2>
+        <p>Trabajamos enfocados principalmente en niños, jóvenes y familias pertenecientes a comunidades en condición de vulnerabilidad, generando espacios de inclusión, igualdad de derechos y oportunidades para mejorar su calidad de vida.</p>
+    </section>
+
+    <!-- 6. PROGRAMAS Y PROYECTOS -->
+    <section class="content-section">
+        <h2>Programas y Proyectos</h2>
+        <p>En cumplimiento de nuestro objeto social, estructuramos e impulsamos las siguientes líneas de acción:</p>
+        <ul>
+            <li><strong>Microfútbol y Deporte:</strong> Fomento de hábitos saludables, aprovechamiento constructivo del tiempo libre y unión de la comunidad a través de actividades deportivas.</li>
+            <li><strong>Educación y Formación:</strong> Otorgamiento de becas, recursos y programas de capacitación orientados a mejorar el acceso a una formación de calidad.</li>
+            <li><strong>Medio Ambiente:</strong> Ejecución de proyectos orientados a la conservación, reforestación y educación ambiental en el territorio.</li>
+            <li><strong>Desarrollo Comunitario:</strong> Impulso de iniciativas culturales, artísticas, de equidad de género y de protección a los derechos de la infancia.</li>
+        </ul>
+    </section>
+
+    <!-- 7. IMPACTO SOCIAL -->
+    <section class="content-section">
+        <h2>Impacto Social</h2>
+        <p>Por medio de nuestra gestión territorial y comunitaria en Bogotá, desarrollamos actividades orientadas a disminuir brechas sociales, incentivando la participación activa de los ciudadanos y consolidando redes de apoyo locales sostenibles.</p>
+    </section>
+
+    <!-- 8. DONACIONES -->
+    <section class="content-section">
+        <h2>Donaciones y Apoyo</h2>
+        <p>Tu aporte multiplica las oportunidades para nuestra comunidad. Conforme a nuestros estatutos, el patrimonio de la fundación se encuentra afectado al cumplimiento de su actividad meritoria.</p>
+        <p><strong>¿Cómo apoyar?</strong> Recibimos auxilios, donaciones de personas naturales o jurídicas y alianzas estratégicas. Contáctanos para conocer los canales de transferencia autorizados.</p>
+    </section>
+
+    <!-- 9. CONTACTO -->
+    <div class="contact-info">
+        <div class="contact-details">
+            <h2>Información de Contacto</h2>
+            <p><strong>NIT:</strong> 901.778.247-1</p>
+            <p><strong>Directora:</strong> Nathalia Ayala</p>
+            <p><strong>Subdirectora:</strong> Karen Hernandez</p>
+            <p><strong>Dirección:</strong> Cr 78J Bis #50-24 Sur</p>
+            <p><strong>Localidad:</strong> Kennedy, Bogotá</p>
+            <p><strong>Teléfono:</strong> 312 692 8336</p>
+            <p><strong>Correo:</strong> nataliaayala574@gmail.com</p>
+        </div>
+        <div style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <p style="color: white; margin-bottom: 10px;">Conoce más sobre nuestra labor:</p>
+            <a href="https://www.fundacionchiexue.org/" target="_blank" class="web-link">Visita nuestra Web</a>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
